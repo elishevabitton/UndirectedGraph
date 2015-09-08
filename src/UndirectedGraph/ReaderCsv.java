@@ -30,13 +30,13 @@ public class ReaderCsv implements Reader
 					isFirstLine = false;				
 					ug = new UndirectedGraph(vl);
 					nm = new NeighbourhoodMatrix(ug.getNodes().size());
-					System.out.println("zlaot" + ug.getNodes().size());
+					//System.out.println("zlaot" + ug.getNodes().size());
 				}
 				else
 				{
 					ArrayList <Vertex> edge = parseOtherLine(line);
 					count++;
-					System.out.println("1: = "+  edge.get(0).getVertexNumber() + ",2 :" +  edge.get(1).getVertexNumber());
+	//				System.out.println("1: = "+  edge.get(0).getVertexNumber() + ",2 :" +  edge.get(1).getVertexNumber());
 					nm.setElement(edge.get(0).getVertexNumber()-1, edge.get(1).getVertexNumber()-1, 1);
 					nm.setElement(edge.get(1).getVertexNumber()-1, edge.get(0).getVertexNumber()-1, 1);
 				}
@@ -55,7 +55,7 @@ public class ReaderCsv implements Reader
 				inputStream.close();
 			}
 		}
-		System.out.println("kodkod" + count);
+		//System.out.println("kodkod" + count);
 		return ug;
 	}
 	

@@ -11,7 +11,9 @@ public class MainClass {
 			WriterCsv writer = new WriterCsv();
 			try 
 			{	
-				String path = "C:\\Users\\HP\\Desktop\\4\\graph_v10_e25.csv";
+				//String path = "C:\\Users\\HP\\Desktop\\TestFile\\graph_v100_e2000.csv";
+				//String path = "C:\\Users\\HP\\Desktop\\TestFile\\graph_v10_e25.csv";
+				String path = "C:\\Users\\HP\\Desktop\\TestFile\\graph_v10_e25.csvgraph_v500_e30000.csv";
 				UndirectedGraph graph = reader.readTXT(path);
 				String outPathASM = null;
 				outPathASM = writer.makeOutPathFromInPath(path, "");
