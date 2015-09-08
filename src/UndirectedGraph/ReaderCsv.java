@@ -12,7 +12,7 @@ public class ReaderCsv implements Reader
 	@Override
 	public UndirectedGraph readTXT(String filePath) throws IOException 
 	{
-		int count=0;
+	//	int count=0;
 		BufferedReader inputStream = null;
 		UndirectedGraph ug = null;
 		NeighbourhoodMatrix nm = null;
@@ -35,7 +35,7 @@ public class ReaderCsv implements Reader
 				else
 				{
 					ArrayList <Vertex> edge = parseOtherLine(line);
-					count++;
+	//				count++;
 	//				System.out.println("1: = "+  edge.get(0).getVertexNumber() + ",2 :" +  edge.get(1).getVertexNumber());
 					nm.setElement(edge.get(0).getVertexNumber()-1, edge.get(1).getVertexNumber()-1, 1);
 					nm.setElement(edge.get(1).getVertexNumber()-1, edge.get(0).getVertexNumber()-1, 1);
